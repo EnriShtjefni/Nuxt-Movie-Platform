@@ -1,19 +1,14 @@
 <template>
-  <div>
+  <div class="min-h-screen">
     <Filter />
-    <div>
-      <Card v-for="movie in movies" :key="movie.id" :movie="movie" />
-    </div>
+    <MoviesContainer :movies="movies" />
   </div>
 </template>
-
 
 <script setup>
 import { ref } from 'vue';
 import Filter from '@/components/Filter.vue';
-import Card from '@/components/Card.vue';
-
-const components = { Filter, Card };
+import MoviesContainer from '~/components/MoviesContainer.vue';
 
 const movies = ref([
   {
@@ -21,6 +16,33 @@ const movies = ref([
     title: 'Movie Title 1',
     description: 'Description of movie 1',
     year: 2021,
+    status: 'Released',
+    company: { name: 'Company 1' },
+    categories: [{ name: 'Category 1' }, { name: 'Category 2' }],
+  },
+  {
+    id: 2,
+    title: 'Movie Title 2',
+    description: 'Description of movie 2',
+    year: 2003,
+    status: 'Released',
+    company: { name: 'Company 1' },
+    categories: [{ name: 'Category 1' }, { name: 'Category 2' }],
+  },
+  {
+    id: 3,
+    title: 'Movie Title 3',
+    description: 'Description of movie 3',
+    year: 2013,
+    status: 'Released',
+    company: { name: 'Company 1' },
+    categories: [{ name: 'Category 1' }, { name: 'Category 2' }],
+  },
+  {
+    id: 2,
+    title: 'Movie Title 4',
+    description: 'Description of movie 4',
+    year: 2008,
     status: 'Released',
     company: { name: 'Company 1' },
     categories: [{ name: 'Category 1' }, { name: 'Category 2' }],

@@ -10,6 +10,8 @@ export default {
     extend: {
       colors: {
         customGray: '#2f2f2f',
+        selectColor: '#434343',
+        cardColor: '#777676',
       },
     },
   },
